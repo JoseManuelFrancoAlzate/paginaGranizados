@@ -1,0 +1,23 @@
+{
+  "name": "paginagranizados",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cloudinary": "^2.1.0",
+    "cowsay": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.4",
+    "nodemon": "^3.1.0"
+  }
+}
