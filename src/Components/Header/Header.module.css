@@ -1,0 +1,25 @@
+/* Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a0dad; /* Color morado */
+  color: white; /* Texto blanco */
+  padding: 20px;
+}
+
+.rc{
+    position: relative;
+ left: 540px
+}
+
+@media (max-width: 1000px){
+ 
+   .rc{
+    position: relative;
+    left: 0px
+   }
+    
+   }
+  

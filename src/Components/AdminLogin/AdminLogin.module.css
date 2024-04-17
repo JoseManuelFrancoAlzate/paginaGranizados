@@ -1,0 +1,26 @@
+.inputs{
+    background-color: rgb(0, 204, 255);
+    color:blueviolet;
+    border-radius: 100px;
+    position: relative;
+    top: 20px;
+}
+
+.form{
+    background-color: black;
+    border-radius: 10px;
+    width: 200px; height: 200px;
+    position: relative;
+    top: 100px;
+}
+
+.buttonLogin{
+    position: relative;
+    top: 50px
+}
+
+.circuloSuperior{
+    background-color: blueviolet;
+    border-radius: 10px;
+    height: 10px; 
+}
