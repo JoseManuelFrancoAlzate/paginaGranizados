@@ -1,0 +1,88 @@
+.form{
+    background-color: rgba(15, 220, 224, 0.5); 
+    width: 300px; height: 200px;
+    position: relative;
+    top: 0px;
+    border-radius: 1px;
+}
+.contenidoForm{
+    position: relative;
+    top: 50px;
+}
+.presentacion{
+    color:azure;
+
+}
+.h4Img{
+color: white;
+font-family: 'Open Sans', sans-serif;
+
+}
+.divImg{
+    background-color: rgba(101, 6, 55, 0.5); 
+    position: relative;
+    top: -50px;
+    color: rgb(246, 246, 255);
+    width: 295px; 
+    border: 2px solid rgb(180, 31, 125); /* Borde sólido de 2px de grosor y color negro */
+    border-radius: 2px;
+}
+.inputs{
+border-radius: 5px;
+border-color: green;
+width: 288px; height:40px;
+position: relative;
+top: 0px;
+}
+.inputs::placeholder {
+    font-family: 'Comic Sans MS', cursive;
+    color: #706565; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo de fuente del placeholder */
+    font-size: 14px; /* Tamaño de la fuente del placeholder */
+}
+.inputFile{
+    position: relative;
+    top: 0px; left:65px ;
+    color:rgb(234, 234, 219);
+    background-color: black;
+}
+.BCrear{
+    position:relative;
+    top: 0px;
+    width: 290px; height: 40px;
+    background-color: rgb(13, 12, 14);
+    color: white
+}
+.divInputs{
+    border: 2px solid rgb(42, 122, 24); /* Borde sólido de 2px de grosor y color negro */ 
+    border-radius: 2px;
+    background-color: rgba(25, 149, 11, 0.5); 
+    position: relative;
+    top: -50px;
+}
+.h2Crea{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+ top: 10px 
+
+}
+.h3crear{
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+ top: -10px 
+}
+
+.Binicio{
+    position: relative;
+    top: -100px; left: 50px;
+    width: 290px; height: 40px;
+    background-color: rgb(13, 12, 14);
+}
+
+.h3Inicio{
+    color: aliceblue;
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+ top: -10px
+}

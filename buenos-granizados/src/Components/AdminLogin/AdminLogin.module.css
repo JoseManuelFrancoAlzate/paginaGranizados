@@ -1,26 +1,73 @@
 .inputs{
-    background-color: rgb(0, 204, 255);
-    color:blueviolet;
-    border-radius: 100px;
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+    border-color:blue;
     position: relative;
     top: 20px;
+    width: 290px; height:40px;
 }
-
-.form{
+input::placeholder {
+    color: #999; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo de fuente del placeholder */
+    font-size: 14px; /* Tamaño de la fuente del placeholder */
+  }
+.form {
     background-color: black;
     border-radius: 10px;
-    width: 200px; height: 200px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    top: 100px;
+    top: 50px;
 }
-
 .buttonLogin{
     position: relative;
-    top: 50px
-}
-
-.circuloSuperior{
+    top: 60px; 
+    width: 290px; height: 40px;
     background-color: blueviolet;
-    border-radius: 10px;
+}
+.circuloSuperior{
+    background-color: rgb(30, 61, 28);
     height: 10px; 
 }
+.h3{
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+ top: -10px
+}
+.adminH2{
+    position:relative;
+    top:-50px;
+color:azure;
+font-family: 'Roboto', sans-serif;
+border-radius: 2px; 
+height: 47px;
+border: 2px solid rgb(30, 61, 28); /* Borde sólido de 2px de grosor y color negro */
+background-color: rgba(27, 65, 28, 0.5); 
+}
+.Binicio{
+    position: relative;
+    top: -80px; left: 50px;
+    width: 290px; height: 40px;
+    background-color: rgb(13, 12, 14);
+}
+.h3{
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+ top: -10px
+}
+    .h3Inicio{
+        color: aliceblue;
+        font-family: 'Comic Sans MS', cursive;
+        position: relative;
+     top: -10px
+    }
+body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-image: url('../../../../api/imagenes/granizados1.jpg');
+        background-color: rgba(0, 0, 0, 0.8); /* Color de fondo negro con una opacidad del 50% */
+        background-blend-mode: multiply; /* Mezcla el color de fondo con la imagen */
+        background-size: cover;
+        background-position: center;
+      } 

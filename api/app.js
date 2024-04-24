@@ -9,6 +9,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
 app.use(bodyParser.json());
 
+// Configuración de CORS
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Permitir solicitudes desde cualquier origen
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH');
+        return res.status(200).json({});
+    }
+    next();
+});
+
 app.use('/', require('./routers/index')) 
 
 //REINICIAR BASE DE DATOS
@@ -31,6 +42,8 @@ async function connectAndResetDatabase() {
 // Llama a la función connectAndResetDatabase() para iniciar la conexión a la base de datos y reiniciarla
 connectAndResetDatabase();*/
 //Verificamos que el puerto de .env funcione
+
+
 const port = process.env.PORT || 3000; 
   
 // Conexión a la base de datos MongoDB

@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className={styles.header}>
    <center>
-    <h1 className={styles.rc}>RICOS CHOLADOS</h1>
+    <h1 className={styles.rc}>BUENOS GRANIZADOS</h1>
    </center>
     </header>
   );

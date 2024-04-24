@@ -1,0 +1,53 @@
+
+.nameSlushys{
+   color: rgb(255, 255, 255);
+   font-family: "Curlz MT", cursive;
+   font-family: Algerian, serif;
+}
+.imgSlushys{
+    position: relative;
+    left: -10px;
+    width: 315px; height: 250px;
+    }
+.priceSlushys{
+    font-size: 1.0em; /* Tamaño de fuente muy pequeño */
+    font-weight: normal; /* Texto sin negrita */
+    color: yellow;
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    text-decoration:underline; /* Tachar el texto */
+    letter-spacing: 2px; /* Espaciado excesivo entre letras */
+    font-style: italic; /* Texto en cursiva */
+
+
+}
+.cardContainer{
+    background-color: rgba(101, 6, 55, 0.5); 
+    color: rgb(246, 246, 255);
+    width: 295px;
+    border: 2px solid rgb(180, 31, 125); /* Borde sólido de 2px de grosor y color negro */
+   border-radius: 2px;
+   padding: 10px;
+   margin-bottom: 20px; /* Ajusta el valor según la separación deseada */
+position: relative;
+left: 40px;
+}
+.divName{
+    background-color: rgba(17, 125, 183, 0.5); 
+    border: 2px solid rgb(93, 31, 180); /* Borde sólido de 2px de grosor y color negro */
+    position: relative;
+    top: -10px;  left: -10px;
+    width: 310px;
+
+}
+.divImg{
+position: relative;
+top:-10px;
+height: 230px;
+}
+.divPrice{
+    background-color: rgba(183, 100, 17, 0.5); 
+    border: 2px solid rgb(93, 31, 180); /* Borde sólido de 2px de grosor y color negro */
+    position: relative;
+    top: 10px;  left: -10px;
+    width: 311px;
+}

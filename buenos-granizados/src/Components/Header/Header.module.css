@@ -10,8 +10,9 @@
 }
 
 .rc{
-    position: relative;
- left: 540px
+  font-family: 'Jokerman', sans-serif;
+  position: relative;
+ left: 480px
 }
 
 @media (max-width: 1000px){
