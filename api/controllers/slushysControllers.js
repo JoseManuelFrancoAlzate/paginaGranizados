@@ -1,5 +1,7 @@
 const Granizados = require('../models/Granizados');
 const cloudinary = require('../Cloudinary/claudinaryConfig')
+const fs = require('fs');
+const path = require('path');
 // Configurar Multer para procesar el archivo de imagen
 
 const getSlushyController = async () => {
@@ -12,11 +14,21 @@ const getSlushyController = async () => {
     }
 };
 
+const getIdSlushysControllers = async (id)=>{
+const slushy = await Granizados.findById(id)
+
+if(!slushy){
+    throw new Error('Granizado no encontrado')
+}
+
+return slushy
+
+}
 
 //SOY IMPORTANTE, RECUERDA ANALIZARME
 //SE QUE EN ESTOS MOMENTOS NO LO HARAS PORQUE ESTAS CANSADO MENTALMENTE Y ORGANIZARAS IMAGENES
 //PERO SOY IMPORTANTE, HAZLO MAÑANA
-const postSlushysControllers = async (name, image, price) => {
+const postSlushysControllers = async (name, image, price, description) => {
     try {
         const existingSlushy = await Granizados.findOne({ name });
         if (existingSlushy) {
@@ -38,7 +50,7 @@ const postSlushysControllers = async (name, image, price) => {
         const imageUrl = cloudinaryUploadResponse.secure_url;
 
         // Crear nuevo granizado con la URL de la imagen
-        const newSlushy = new Granizados({ name, image: imageUrl, price });
+        const newSlushy = new Granizados({ name, image: imageUrl, price, description});
         const createdSlushy = await newSlushy.save();
 
         return createdSlushy; // O cualquier otra respuesta que desees enviar
@@ -49,12 +61,10 @@ const postSlushysControllers = async (name, image, price) => {
     }
 };
 
-
-
-const putSlushysController = async(id, name, image, price)=>{ 
+const putSlushysController = async(id, name, image, price, description)=>{ 
 try {
     const existingSlushy = await Granizados.findOne({ name });
-    const uptadeSlushy = await Granizados.findByIdAndUpdate(id,{ name, image, price}, {new: true})
+    const uptadeSlushy = await Granizados.findByIdAndUpdate(id,{ name, image, price, description}, {new: true})
  
     if (existingSlushy) { 
         return { message: 'Ya existe este granizado' };
@@ -72,7 +82,6 @@ try {
 const deleteSlushysController =  async(id)=>{
 try {
     const deleteSlushys =await  Granizados.findByIdAndDelete(id)
-
     if(!deleteSlushys){
         return 'Granizado no encontrado'
     }
@@ -82,5 +91,42 @@ try {
 }
 }
 
-module.exports = { getSlushyController, postSlushysControllers, putSlushysController, deleteSlushysController};
+const deleteImgsSlushysControllers = async () => {
+    const directorioImagenes = path.join(__dirname,'../imagenesMulter');
+
+    return new Promise((resolve, reject) => {
+        fs.readdir(directorioImagenes, (err, archivos) => {
+            if (err) {
+                console.error('Error al leer la carpeta de imágenes:', err);
+                reject(err);
+                return;
+            }
+
+            const promesas = archivos.map((archivo) => {
+                const rutaArchivo = path.join(directorioImagenes, archivo);
+                return new Promise((resolveArchivo, rejectArchivo) => {
+                    fs.unlink(rutaArchivo, (err) => {
+                        if (err) {
+                            console.error('Error al eliminar el archivo:', err);
+                            rejectArchivo(err);
+                            return;
+                        }
+                        console.log(`Archivo "${archivo}" eliminado correctamente`);
+                        resolveArchivo();
+                    });
+                });
+            });
+
+            Promise.all(promesas)
+                .then(() => {
+                    resolve("Imágenes eliminadas correctamente");
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    });
+};
+
+module.exports = {getSlushyController,getIdSlushysControllers,postSlushysControllers, putSlushysController, deleteSlushysController, deleteImgsSlushysControllers};
 

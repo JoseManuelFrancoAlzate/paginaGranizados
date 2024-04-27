@@ -1,4 +1,5 @@
 const Admin = require('../models/Admin');
+const mongoose = require('mongoose');
 
 
 
@@ -60,5 +61,62 @@ return {admin: deleteAdmin,  message: "Administrador eliminado"}
 }
 }
 
-module.exports = { getAdminController, postAdminControllers, putAdminController, deleteAdminController };
+const putAdminAssetTrueController = async () => {
+    try {
+      // Actualizar el campo 'asset' del primer documento en la colección
+      const updatedAdmin = await Admin.findOneAndUpdate(
+        {}, // Sin condiciones de búsqueda (todos los documentos)
+        { asset: true }, // Establecer 'asset' como true en el documento encontrado
+        { new: true } // Devolver el documento actualizado
+      );
+  
+      if (!updatedAdmin) {
+        console.log('No se encontró ningún documento para actualizar');
+        return null;
+      }
+  
+      console.log('Documento actualizado:', updatedAdmin);
+      return updatedAdmin;
+    } catch (error) {
+      console.error('Error al actualizar el documento:', error);
+      throw error; // Lanza el error para que sea manejado por el controlador
+    }
+  };
+  
+const putAdminAssetFalseController = async()=>{
+    try {
+        // Actualizar el campo 'asset' del primer documento en la colección
+        const updatedAdmin = await Admin.findOneAndUpdate(
+          {}, // Sin condiciones de búsqueda (todos los documentos)
+          { asset: false }, // Establecer 'asset' como true en el documento encontrado
+          { new: true } // Devolver el documento actualizado
+        );
+    
+        if (!updatedAdmin) {
+          console.log('No se encontró ningún documento para actualizar');
+          return null;
+        }
+    
+        console.log('Documento actualizado:', updatedAdmin);
+        return updatedAdmin;
+      } catch (error) {
+        console.error('Error al actualizar el documento:', error);
+        throw error; // Lanza el error para que sea manejado por el controlador
+      }
+}
+const restartPageAdminController = async()=>{
+    try {
+        await mongoose.connect(process.env.MONGODB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+
+        // Reiniciar la base de datos después de que la conexión se haya establecido
+        await mongoose.connection.db.dropDatabase();
+        console.log('Base de datos reiniciada exitosamente');
+    } catch (error) {
+        console.error('Error al reiniciar la base de datos:', error);
+    } 
+}
+module.exports = { getAdminController, postAdminControllers, putAdminController, deleteAdminController, restartPageAdminController, putAdminAssetTrueController,putAdminAssetFalseController};
    

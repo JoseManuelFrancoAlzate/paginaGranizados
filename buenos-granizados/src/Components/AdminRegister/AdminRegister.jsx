@@ -3,7 +3,7 @@
 import {  useDispatch } from 'react-redux'
 import { postActionAdmin } from '../../Redux/actions'
 import { useState } from 'react'
-
+import Header from '../Header/Header';
 
 const AdminRegister = ()=>{
     const navigate = useNavigate()
@@ -38,6 +38,7 @@ console.log(navigate);
 
 return(
     <div> 
+              <Header/>
         <center>
         <div className={styled.circuloSuperior}>
           <h2 className={styled.adminH2}>Registrar</h2>

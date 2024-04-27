@@ -1,14 +1,12 @@
 import styled from "./AdminLogin.module.css";
-import { getActionAdmin } from "../../Redux/actions";
+import { getActionAdmin, putActionAdminAssetTrue, putActionAdminAssetFalse} from "../../Redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import PaginaAdmin from "../PaginaAdmin/PaginaAdmin";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AdminRegister from "../AdminRegister/AdminRegister";
-
+import Header from "../Header/Header";
 const AdminLogin = () => {
-  const navigate = useNavigate();
   const stateAdmin = useSelector((state) => state.admin);
   const dispatch = useDispatch();
 
@@ -28,12 +26,12 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       if (admin.user === stateAdmin.user && admin.password === stateAdmin.password) {
-        stateAdmin.asset = true;
+        dispatch(putActionAdminAssetTrue())
         alert("Sesión iniciada");
-        navigate("/admin");
+        window.location.reload();
       } else {
         alert("Usuario o contraseña incorrectos");
-        stateAdmin.asset = false;
+       dispatch(putActionAdminAssetFalse())
       }
     } catch (error) {
       alert("Error durante el inicio de sesión");
@@ -47,6 +45,7 @@ const AdminLogin = () => {
 
   return !stateAdmin ? ( <AdminRegister/>) : ( stateAdmin.asset !== true ? (
     <div className={styled.background}>
+            <Header/>
       <Link to="/home">
       <button className={styled.Binicio}> <h3 className={styled.h3Inicio}>Inicio</h3></button>
       </Link>

@@ -1,4 +1,4 @@
-const { getAdminController, postAdminControllers, putAdminController, deleteAdminController } = require('../controllers/adminControllers');
+const { getAdminController, postAdminControllers, putAdminController, deleteAdminController, restartPageAdminController, putAdminAssetTrueController,putAdminAssetFalseController} = require('../controllers/adminControllers');
 
 const getAdminHandler = async (req, res) => {
     try {
@@ -46,5 +46,31 @@ try {
     res.status(400).json({error: error.message})
 }
 }
+
+const putAdminAssetTrueHandler = async(req,res)=>{
+try {
+    const putAdminAsset = await putAdminAssetTrueController()
+   res.status(200).json(putAdminAsset)
+} catch (error) {
+    res.status(400).json({error:error.message})
+}
+}
+
+const putAdminAssetFalseHandler = async(req,res)=>{
+    try {
+        const putAdminAsset = await putAdminAssetFalseController()
+       res.status(200).json(putAdminAsset)
+    } catch (error) {
+        res.status(400).json({error:error.message})
+    }
+    }
+const restartPageAdminHandler = async(req,res)=>{
+    try {
+       const restartPage =  await restartPageAdminController()
+       res.status(200).json({message: 'Pagina reinicidada', admin: restartPage})
+    } catch (error) {
+      res.status(400).json({error: error.message})  
+    }
+}
   
-module.exports = { getAdminHandler, postAdminHandler, putAdminHandler, deleteAdminHandler };
+module.exports = { getAdminHandler, postAdminHandler, putAdminHandler, deleteAdminHandler,restartPageAdminHandler, putAdminAssetTrueHandler, putAdminAssetFalseHandler};

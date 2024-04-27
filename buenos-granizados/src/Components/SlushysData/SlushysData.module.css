@@ -1,0 +1,155 @@
+.card {
+    background-color: #000000db;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 30px; /* Ajusta el padding según sea necesario */
+    position: relative;
+    height: 550px;
+    position: relative; /* Establece el contenedor como un elemento de posición relativa */
+
+  }
+  
+  .card::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: 15px;
+    background: linear-gradient(
+      45deg,
+      #ff00ff,
+      #ff0080,
+      #ff0000,
+      #ff8000,
+      #ffff00,
+      #80ff00,
+      #00ff00,
+      #00ff80,
+      #00ffff,
+      #0080ff,
+      #0000ff,
+      #8000ff,
+      #ff00ff
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+.letraColorName{
+    position: relative;
+    top: -260px; left: 0px;
+    color: #f0f;
+    font-family: "Curlz MT", cursive;
+    font-family: Algerian, serif;
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 30px #0ff,
+      0 0 40px #0ff,
+      0 0 55px #0ff,
+      0 0 75px #0ff;}
+
+      .letraColorPrice{
+        position: relative;
+        left: 250px; top:0px;
+        color: yellow;
+        text-decoration:underline; /* Tachar el texto */
+        letter-spacing: 2px; /* Espaciado excesivo entre letras */
+        font-style: italic; /* Texto en cursiva */
+        color: #f0f;
+        text-shadow:
+          0 0 5px #0ff,
+          0 0 10px #0ff,
+          0 0 20px #0ff,
+          0 0 30px #0ff,
+          0 0 40px #0ff,
+          0 0 55px #0ff,
+          0 0 75px #0ff;}
+
+          .letraColorDescription{
+            text-align: center;
+            position: relative;
+            top: -250px;
+            width: 620px;
+            height: 10px;
+            overflow-wrap: break-word;
+            color: #f0f;
+            text-shadow:
+              0 0 5px #0ff,
+              0 0 10px #0ff,
+              0 0 20px #0ff,
+              0 0 30px #0ff,
+              0 0 40px #0ff,
+              0 0 55px #0ff,
+              0 0 75px #0ff;}
+.img{
+
+    width: 600px; height: 500px;
+    border-radius: 10px;
+    border: 1px solid #35259d;
+
+}
+
+.leftContent {
+    flex: 1;
+}
+
+.rightContent {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.buttonI {
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(to right, rgb(13, 12, 14), #ff0000); /* Aplica un gradiente de color */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ff0000,
+              0 0 20px #ff0000,
+              0 0 30px #ff0000;
+  cursor: pointer;
+}
+
+
+ .h3Inicio{
+        color: aliceblue;
+        font-family: 'Comic Sans MS', cursive;
+        position: relative;
+ 
+    }

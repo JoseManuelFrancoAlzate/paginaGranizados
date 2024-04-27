@@ -49,6 +49,26 @@ background-color: rgba(27, 65, 28, 0.5);
     top: -80px; left: 50px;
     width: 290px; height: 40px;
     background-color: rgb(13, 12, 14);
+
+    @media (max-width: 1000px) {
+        top: 440px; left: 300px;
+ }
+ 
+ @media (max-width: 900px) {
+    top: 440px; left: 250px;
+}
+@media (max-width: 800px) {
+    top: 440px; left: 200px;
+}
+@media (max-width: 700px) {
+    top: 440px; left: 150px;
+}
+    @media (max-width: 500px) {
+       top: 440px; left: 100px;
+      }
+      @media (max-width: 590px) {
+        top: 440px; left: 50px;
+       }
 }
 .h3{
     font-family: 'Comic Sans MS', cursive;
@@ -58,7 +78,7 @@ background-color: rgba(27, 65, 28, 0.5);
     .h3Inicio{
         color: aliceblue;
         font-family: 'Comic Sans MS', cursive;
-        position: relative;
+        position: relative; 
      top: -10px
     }
 body {
@@ -71,3 +91,4 @@ body {
         background-size: cover;
         background-position: center;
       } 
+       
