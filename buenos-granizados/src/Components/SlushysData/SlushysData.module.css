@@ -4,7 +4,7 @@
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: space-around;
@@ -13,7 +13,6 @@
     position: relative;
     height: 550px;
     position: relative; /* Establece el contenedor como un elemento de posición relativa */
-
   }
   
   .card::before {
@@ -56,9 +55,10 @@
     }
   }
 
+
 .letraColorName{
     position: relative;
-    top: -260px; left: 0px;
+    top: -260px; left: -450px;
     color: #f0f;
     font-family: "Curlz MT", cursive;
     font-family: Algerian, serif;
@@ -91,7 +91,7 @@
           .letraColorDescription{
             text-align: center;
             position: relative;
-            top: -250px;
+            top: -280px;
             width: 620px;
             height: 10px;
             overflow-wrap: break-word;
@@ -104,8 +104,34 @@
               0 0 40px #0ff,
               0 0 55px #0ff,
               0 0 75px #0ff;}
-.img{
 
+              /* Media query para pantallas más pequeñas */
+         /* Estilos base */
+.letraColorDescription {
+  text-align: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+  color: #f0f;
+  text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 30px #0ff,
+      0 0 40px #0ff,
+      0 0 55px #0ff,
+      0 0 75px #0ff;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .letraColorDescription {
+      font-size: 16px; /* Cambia el tamaño de la fuente */
+      margin-top: 15px; /* Ajusta el margen superior en pantallas más pequeñas */
+  }
+}
+
+.img{
+    position: relative;
+    top: 10px;
     width: 600px; height: 500px;
     border-radius: 10px;
     border: 1px solid #35259d;
@@ -122,6 +148,10 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
+ 
+    @media(max-width: 700px){
+   
+    }
 }
 
 .buttonI {
@@ -152,4 +182,32 @@
         font-family: 'Comic Sans MS', cursive;
         position: relative;
  
+    }
+
+
+    @media screen and (max-width:480px){
+      .buttonI{
+top:0px
+      }
+   .img{
+    left:-30px; top:-30px;
+    position: relative;
+    width: 810px; height: 600px;
+   }
+   .card{
+    left:50px; top: 100px;
+    width: 750px; height: 1200px;
+   }
+   .letraColorPrice{
+    left: 290px; top:-70px;
+    font-size: 50px;
+   }
+  .letraColorName{
+left: 230px; top: -1050px;
+font-size: 45px
+  }
+   .letraColorDescription{
+
+   }
+   
     }

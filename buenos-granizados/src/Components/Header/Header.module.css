@@ -12,15 +12,12 @@
 .rc{
   font-family: 'Jokerman', sans-serif;
   position: relative;
- left: 480px
+ left: 480px;
+ @media (max-width: 900px) {
+  position: relative;
+  left: 0px
+}
 }
 
-@media (max-width: 1000px){
- 
-   .rc{
-    position: relative;
-    left: 0px
-   }
-    
-   }
+
   

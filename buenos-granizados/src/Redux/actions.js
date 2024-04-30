@@ -124,6 +124,19 @@ export const restartActionPage = ()=>{
     }
 }
 
+export const deleteActionSlushys = (id)=>{
+    return async function(){
+        try {
+            const deleteSlushys = await axios.delete(`${URL_SLUSHYS}/${id}`)
+            alert('slushy Eliminado')
+return deleteSlushys
+        } catch (error) {
+            alert('Error al eliminar el slushy')
+            console.log('Error al eliminar el slushy', error)
+        }
+    }
+}
+
 //PUT
 export const putActionAdminAssetTrue = ()=>{
     return async function(){

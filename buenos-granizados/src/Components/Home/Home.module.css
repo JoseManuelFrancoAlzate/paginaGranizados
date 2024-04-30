@@ -7,4 +7,17 @@
     justify-content: center; /* Centra las tarjetas horizontalmente */
     margin-left: auto; /* Desplaza el contenedor hacia la derecha */
     align-items: flex-start;
+   
 }
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Cambia a 1 columna en pantallas aún más pequeñas */
+    }
+    }

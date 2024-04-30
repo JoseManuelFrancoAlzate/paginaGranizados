@@ -51,7 +51,7 @@ console.log(slushy)
     return(
 <div>
 <Header/>
-<Link to="/home">
+<Link to="/">
       <button className={styled.Binicio}> <h3 className={styled.h3Inicio}>Inicio</h3></button>
       </Link>
       <button onClick={handleSignOff} className={styled.BCerrar}><h3 className={styled.h3Cerrar}>Cerrar sesion</h3></button>

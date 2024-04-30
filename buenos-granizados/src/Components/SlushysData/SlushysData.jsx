@@ -20,7 +20,7 @@ const SlushysData = ()=>{
             <h2 className={styled.letraColorPrice}>{`$${stateIdSlushy.price}`}</h2>
         </div>
         <div className={styled.rightContent}>
-        <Link to="/home">
+        <Link to="/">
       <button className={styled.buttonI}>Inicio</button>
       </Link>
             <h1 className={styled.letraColorName}>{stateIdSlushy.name}</h1>

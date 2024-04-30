@@ -1,9 +1,22 @@
-.settings{
-    position: relative;
-    left: 10px;
-    color: brown;
-
+.settings {
+  position: relative;
+  left: 10px;
+  color: #4a4a4a; /* Cambia el color del texto según sea necesario */
+  background-color: #f0f0f0; /* Cambia el color de fondo según sea necesario */
+  width: 213px;
+  border-radius: 5px; /* Agrega bordes redondeados al contenedor */
+  padding: 10px; /* Agrega un relleno al contenedor */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
 }
+
+.settings h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0; /* Ajusta el relleno superior e inferior del título */
+  border-bottom: 2px solid #ccc; /* Agrega una línea de borde inferior */
+}
+
 .buttonBorrarImgs{
     position: relative;
     left: 10px;
@@ -13,18 +26,90 @@
     position: relative;
     left: 10px;
     cursor:pointer
+    
 }
 .buttonRestart{
 position: relative;
 left: 10px;
 cursor:pointer }
 
-.buttonAdmin{
-    position: relative;
-    top: -70px; left: 1110px;
-    cursor:pointer
+.buttonBorrarImgs,
+.buttonEliminarAdmin,
+.buttonRestart{
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
+.buttonBorrarImgs::before,
+.buttonEliminarAdmin::before,
+.buttonRestart::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ff00, #ff00ff, #00ff00);
+  background-size: 400% 400%;
+  z-index: -1;
+  transition: all 0.6s;
+  border-radius: 5px;
+}
+.buttonBorrarImgs:hover::before,
+.buttonEliminarAdmin:hover::before,
+.buttonRestart:hover::before {
+  filter: blur(20px);
+  background-position: right;
+}
+
+.buttonAdmin {
+  position: relative;
+  left:10px;
+  color: #d4c60e;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #d4c60e;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.buttonAdmin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #d4c60e;
+  z-index: -1;
+  opacity: 0.3; /* Ajusta la opacidad para crear un efecto más suave */
+  transition: opacity 0.3s ease-in-out; /* Agrega una transición para suavizar el cambio de opacidad */
+}
+
+.buttonAdmin:hover::before {
+  opacity: 0.5; /* Ajusta la opacidad al pasar el cursor sobre el botón */
+}
+
+@media (max-width: 600px) {
+  .buttonAdmin {
+    top: 0px;
+    left: 10px;
+  }
+}
 
 
 /* Estilos para el modal de confirmación */

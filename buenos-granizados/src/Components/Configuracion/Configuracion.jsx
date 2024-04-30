@@ -25,10 +25,10 @@ const Configuracion = () => {
     if (adminData) {
       dispatch(deleteActionAdmin(adminData._id));
       alert('Administrador eliminado');
-      navigate('/home');
+      navigate('/');
     } else {
       alert('No hay ningún administrador');
-      navigate('/home');
+      navigate('/');
 
     }
   };
@@ -42,7 +42,7 @@ const handleRestartButtonClick = () => {
 
   const handleConfirmRestart = () => {
     dispatch(restartActionPage())
-   navigate('/home')
+   navigate('/')
   };
 
   const handlerDeleteImgs = ()=>{
@@ -74,6 +74,7 @@ dispatch(getActionAdmin())
                 <div className={styled.modalContent}>
                   <h2>Confirmar acción</h2>
                   <p>¿Seguro que quieres Eliminar el administrador?</p>
+                  <p>(Cabe aclarar que esto no eliminara tus granizados, solo deberas volver a registrarte)</p>
                   <div className={styled.modalButtons}>
                     <button onClick={handleConfirmDeleteAdmin} className={styled.confirmButton}>Aceptar</button>
                     <button onClick={handleCancelDeleteAdminButtom} className={styled.cancelButton}>Cancelar</button>

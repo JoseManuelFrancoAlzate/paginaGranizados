@@ -92,21 +92,22 @@ top: 0px;
     top: -100px; left: 50px;
     width: 290px; height: 40px;
     background-color: rgb(13, 12, 14);
+    
     cursor:pointer;
     @media (max-width: 900px) {
-        top: 50px; left: 250px;
+        top: 50px; left: 270px;
     }
     @media (max-width: 800px) {
-        top: 50px; left: 200px;
+        top: 50px; left: 210px;
     }
     @media (max-width: 700px) {
-        top: 50px; left: 150px;
+        top: 50px; left: 190px;
     }
-    @media (max-width: 590px) {
-        top: 50px; left: 100px;
+    @media (max-width: 600px) {
+        top: 50px; left: 150px;
        }
         @media (max-width: 500px) {
-           top: 50px; left: 100px;
+           top: 90px; left: 100px;
           }
          
 }
@@ -116,12 +117,27 @@ top: 0px;
     color: aliceblue;
     font-family: 'Comic Sans MS', cursive;
     position: relative;
- top: -10px
+ top: -10px 
 }
 .BCerrar{
 background-color: aliceblue;
 position: relative;
-top: -50px; left:-240px
+top: -50px; left:-240px;
+@media (max-width: 900px) {
+    top: 5px; left: -20px;
+}
+@media (max-width: 800px) {
+    top: 5px; left: -80px;
+}
+@media (max-width: 700px) {
+    top: 5px; left: -100px;
+}
+@media (max-width: 600px) {
+    top: 60px; left: 150px;
+   }
+    @media (max-width: 500px) {
+       top: 5px; left: 100px;
+      }
 }
 .h3Cerrar{
     color:black
@@ -130,20 +146,21 @@ top: -50px; left:-240px
     position: relative;
     left: 500px; top: -140px;
     width: 50px; height: 50px;
+    border-radius: 10px;
     background-color: rgba(255, 228, 196, 0.564);
     cursor: pointer;
     @media (max-width: 1000px) {
-        top: -130px; left: 250px;
+        top: -130px; left: 200px;
     }
     @media (max-width: 900px) {
-        top: -130px; left: 250px;
+        top: -130px; left: 200px;
     }
     
 @media (max-width: 800px) {
     top: -130px; left: 200px;
 }
 @media (max-width: 700px) {
-    top: -130px; left: 150px;
+    top: -130px; left: 200px;
 }
 @media (max-width: 590px) {
     top: -130px;; left: 200px;

@@ -46,7 +46,7 @@ const AdminLogin = () => {
   return !stateAdmin ? ( <AdminRegister/>) : ( stateAdmin.asset !== true ? (
     <div className={styled.background}>
             <Header/>
-      <Link to="/home">
+      <Link to="/">
       <button className={styled.Binicio}> <h3 className={styled.h3Inicio}>Inicio</h3></button>
       </Link>
       <center>
