@@ -34,6 +34,8 @@ dispatch(getActionAdmin())
         <Route path="/slushys/:id" element={<SlushysData/>} />
         <Route path="/admin" element={<AdminLogin/>}/>
         <Route path="/" element={<Home/>}/> 
+        <Route path="*" element={<Navigate replace to="/"/>}/>
+
        </Routes>
       )
 }

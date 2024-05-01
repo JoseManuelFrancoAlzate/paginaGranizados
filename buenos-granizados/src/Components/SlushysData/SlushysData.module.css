@@ -186,28 +186,29 @@
 
 
     @media screen and (max-width:480px){
+      .card{
+        left:10px; top: 50px;
+        width: 200px; height: 400px;
+       }
       .buttonI{
-top:0px
+top:-28px; left: 310px;
       }
    .img{
     left:-30px; top:-30px;
     position: relative;
-    width: 810px; height: 600px;
-   }
-   .card{
-    left:50px; top: 100px;
-    width: 750px; height: 1200px;
+    width: 258px; height:200px;
    }
    .letraColorPrice{
-    left: 290px; top:-70px;
-    font-size: 50px;
+    left: 60px; top:-50px;
+    font-size: 20px;
    }
   .letraColorName{
-left: 230px; top: -1050px;
-font-size: 45px
+left: 13px; top: -380px;
+font-size: 20px
   }
    .letraColorDescription{
-
-   }
+    left: -50px; top: -150px;
+    max-width: 260px;
+  }
    
     }
