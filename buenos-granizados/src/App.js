@@ -8,7 +8,7 @@ import DeletePagin from './Components/DeletePagin/DeletePagin';
 import {getActionAdmin} from './Redux/actions';
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
-axios.defaults.baseURL = "http://localhost:3001/";
+axios.defaults.baseURL = "https://granizadosback.onrender.com/";
 
 
 function App() {
