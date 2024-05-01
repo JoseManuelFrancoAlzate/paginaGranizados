@@ -4,10 +4,11 @@ import AdminLogin from './Components/AdminLogin/AdminLogin';
 import axios from "axios"
 import SlushysData from './Components/SlushysData/SlushysData';
 import Configuracion from './Components/Configuracion/Configuracion';
-import {getActionAdmin} from './Redux/actions'
+import DeletePagin from './Components/DeletePagin/DeletePagin';
+import {getActionAdmin} from './Redux/actions';
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
-axios.defaults.baseURL = "https://granizadosback.onrender.com/";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 
 function App() {
@@ -23,7 +24,7 @@ dispatch(getActionAdmin())
     <div className="App">
       { !stateAdmin || stateAdmin.asset === false  ? (
          <Routes>
-         <Route path="/" element={<Home/>}/> 
+         <Route path="/" element={<Home/>}/>
          <Route path="/slushys/:id" element={<SlushysData/>} />
          <Route path="/admin" element={<AdminLogin/>}/>
          <Route path="*" element={<Navigate replace to="/"/>}/>
@@ -32,10 +33,10 @@ dispatch(getActionAdmin())
         <Routes>
         <Route path="/settings" element={<Configuracion/>}/>
         <Route path="/slushys/:id" element={<SlushysData/>} />
+        <Route path="/delete/slushys" element={<DeletePagin/>}/> 
         <Route path="/admin" element={<AdminLogin/>}/>
         <Route path="/" element={<Home/>}/> 
         <Route path="*" element={<Navigate replace to="/"/>}/>
-
        </Routes>
       )
 }

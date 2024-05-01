@@ -98,6 +98,11 @@ dispatch(getActionAdmin())
           </div>
         </div>
       )}
+      <p>
+        <Link to="/delete/slushys">
+      <button className={styled.buttonDelete}><h2>Eliminar Granizados</h2></button>
+      </Link>
+      </p>
     </div>
   );
 };

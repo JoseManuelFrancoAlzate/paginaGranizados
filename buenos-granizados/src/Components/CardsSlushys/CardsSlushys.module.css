@@ -1,8 +1,10 @@
-
-.nameSlushys{
-   color: rgb(255, 255, 255);
-   font-family: "Curlz MT", cursive;
-   font-family: Algerian, serif;
+.nameSlushys {
+    color: rgb(255, 255, 255);
+    font-family: "Curlz MT", cursive;
+    font-family: Algerian, serif;
+    max-width: 300px; /* Establece el ancho máximo */
+    white-space: normal; /* Permite que el texto se envuelva automáticamente cuando excede el ancho máximo */
+    word-wrap: break-word; /* Fuerza el salto de palabras cuando el texto no cabe en una sola línea */
 }
 .imgSlushys{
     position: relative;
@@ -59,3 +61,21 @@ height: 230px;
     border-radius: 5px;
     color: white;
 }
+
+@media screen and (max-width: 1366px) {
+    .cardContainer{
+     left: 10px
+    }
+    .buttonX{
+     left: 165px
+    }
+    }
+    
+@media screen and (max-width: 896px) {
+   .cardContainer{
+    left: 10px
+   }
+   .buttonX{
+    left: 165px
+   }
+   }

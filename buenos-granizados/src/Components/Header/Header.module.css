@@ -18,6 +18,14 @@
   left: 0px
 }
 }
+@media screen and (max-width: 1024px) {
+ .rc{
+  left: 300px
+ }
+  }
 
-
-  
+@media screen and (max-width: 896px) {
+ .rc{
+  left: 10px
+ }
+}
